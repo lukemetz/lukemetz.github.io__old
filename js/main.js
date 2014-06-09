@@ -95,12 +95,15 @@ $('.chart').waypoint(function() {
 		$.vegas('slideshow', {
 			  backgrounds:[
 				
-				{ src:'img/slider/01.jpg', fade:1000 },
-				{ src:'img/slider/02.jpg', fade:1000 },
-				{ src:'img/slider/03.jpg', fade:1000 },
-				{ src:'img/slider/04.jpg', fade:1000 }
+				{ src:'img/backdrop1.png', fade:1000 },
+				{ src:'img/backdrop2.png', fade:1000 },
+				{ src:'img/backdrop3.png', fade:1000 },
+				{ src:'img/backdrop4.png', fade:1000 },
+				{ src:'img/backdrop5.png', fade:1000 },
+				{ src:'img/backdrop6.png', fade:1000 },
 			  ]
-			})('overlay', {
+			})
+      ('overlay', {
 			  src:'img/overlays/16.png'
 			});
 			$( "#vegas-next" ).click(function() {
