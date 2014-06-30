@@ -52,9 +52,33 @@ $(document).ready(function(){
 $('.grid-wrapper').magnificPopup({
 		  delegate: 'a', 
 		  type: 'image',
-		  gallery:{
-			enabled:true
-		  }
+		  /*gallery:{
+			  enabled:true
+		  },*/
+      image: {
+        markup: '<div class="mfp-figure">'+
+                  '<div class="mfp-close"></div>'+
+                  '<div class="mfp-img"></div>'+
+                  '<div class="mfp-bottom-bar">'+
+                    '<div class="mfp-title"></div>'+
+                    '<div class="mfp-counter"></div>'+
+                  '</div>'+
+                '</div>',
+        // Or the function that should return the title. For example:
+        titleSrc: function(item) {
+          console.log(item.el);
+          return $(item.el.attr('desc')).html()
+        },
+
+        verticalFit: true, // Fits image in area vertically
+      },
+      callbacks: {
+
+        resize:function() {
+          this.currItem.img.css("max-height",this.wH-200);
+        }
+      }
+
 		});
 
 
@@ -91,16 +115,15 @@ $('.chart').waypoint(function() {
 
 
 /* VEGAS Home Slider */
-	
+
 		$.vegas('slideshow', {
 			  backgrounds:[
-				
-				{ src:'img/backdrop1.png', fade:1000 },
-				{ src:'img/backdrop2.png', fade:1000 },
-				{ src:'img/backdrop3.png', fade:1000 },
+				//{ src:'img/backdrop1.png', fade:1000 },
+				//{ src:'img/backdrop2.png', fade:1000 },
+				//{ src:'img/backdrop3.png', fade:1000 },
 				{ src:'img/backdrop4.png', fade:1000 },
-				{ src:'img/backdrop5.png', fade:1000 },
-				{ src:'img/backdrop6.png', fade:1000 },
+				//{ src:'img/backdrop5.png', fade:1000 },
+				//{ src:'img/backdrop6.png', fade:1000 },
 			  ]
 			})
       ('overlay', {

@@ -612,11 +612,17 @@ label.valid{
           #page-profile .profile{
     margin:0 auto 20px auto;
   }
-  
-   
-
 }
 
+/* custom popup */
+.description {
+  display: none;
+}
 
+.mfp-bottom-bar {
+  font-color: #000000
+}
 
-
+div.mfp-bg {
+  opacity: 0.85
+}
