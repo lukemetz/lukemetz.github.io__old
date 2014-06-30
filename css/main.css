@@ -627,4 +627,9 @@ div.mfp-bg {
 }
 
 #resume {
+  margin-left: 40px;
+}
+
+.top-box {
+  width: 180px;
 }
